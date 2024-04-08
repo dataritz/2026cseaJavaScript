@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="/css/style1.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <form>
+      <fieldset>
+        <legend>Basic Detilas</legend>
+        <label for="name">User Name</label>
+        <input type="text" placeholder="Enter User Name" name="name" required>
+        <label for="pass">Password</label>
+        <input type="password" placeholder="Enter your pasword" name="pass" required>
+        <label for="repass">Retype Password</label>
+        <input type="password" placeholder="Retype your pasword" name="repass" required>
+        <label for="dob">Date of birth</label>
+        <input type="date" name="dob">
+      </fieldset>
+      <fieldset>
+        <legend>Gender</legend>
+        <label for="gender">Male</label>
+        <input type="radio" name="gender" value="Male">
+        <label for="fMale">Female</label>
+        <input type="radio" name="gender" value="Female">
+      </fieldset>
+      <fieldset>
+        <legend>Address</legend>
+        <input type="text" placeholder="Address Line-1">
+        <input type="text" placeholder="Address Line-2">
+        <select name="City" id="">
+          <option value="">Delhi</option>
+          <option value="">Delhi</option>
+          <option value="">Delhi</option>
+          <option value="">Delhi</option>
+        </select>
+        <select name="state" id="" required>
+          <option value="">Choose</option>
+          <option value="">Delhi</option>
+          <option value="">Delhi</option>
+          <option value="">Delhi</option>
+        </select>
+      </fieldset>
+      <input type="submit" class="btn1">
+      <input type="reset" class="btn2">
+    </form>
+  </div>
+</body>
+</html>

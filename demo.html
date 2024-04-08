@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+   let add =  function(a,b){return a+b};
+   let mul =  function(a,b){return a*b};
+   let div =  function(a,b){return a/b};
+
+   let myPromise = new Promise(function(myResolve, myReject) {
+    setTimeout(()=>{
+        console.log(cal(a,b));
+      },2000);
+      console.log("Hi");
+    });
+    
+   myPromise.then((a,b,add)=>console.log())
+
+  </script>
+</body>
+</html>

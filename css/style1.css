@@ -1,0 +1,42 @@
+.container{
+  padding: 30px 30px 50px 30px;
+  background-color: gainsboro;
+  height: 100%;
+}
+
+input[type=text],input[type=password],input[type=date]{
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+select{
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+
+label{
+  font-weight: bold;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input[type=text]:focus,input[type=password]:focus{
+  background-color: linen;
+}
+
+.btn1,.btn2{
+  width: 50%;
+  float: left;
+  padding: 10px;
+  color: aliceblue;
+  font-size: medium;
+  border: none;
+}
+fieldset{
+  margin-bottom: 10px;
+}
+.btn1{
+  background-color: green;
+}
+.btn2{
+  background-color: blue;
+}
