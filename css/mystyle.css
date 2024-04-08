@@ -1,0 +1,27 @@
+.pro1{
+  color:yellow;
+}
+.pro2{
+  color: blue;
+}
+.bor{
+  border: 2px solid red;
+}
+#id1{
+  background-color: aqua;
+}
+.m20{
+  margin-top: 20px;
+}
+#form1{
+  background-color: beige;
+}
+input[type=text],input[type=password]{
+  background-color: #C6EF84;
+  width: 97%;
+  margin-bottom: 10px;
+}
+
+input[type=text]:focus,input[type=password]:focus{
+  background-color:#84EFE3;
+}

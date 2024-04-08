@@ -1,0 +1,9 @@
+CSS - 
+we can apply CSS in three way
+	- Inline - 
+		<p style="color:red;">This is para 1</p>
+	- Internal
+	- External
+
+CSS Syntax - 
+	{property:value;}
