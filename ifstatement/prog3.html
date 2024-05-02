@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>WAP to check a triangle is a equilateral, isosceles or scalene</p>
+  <input type="text" placeholder="Enter frist side" id="t1">
+  <input type="text" placeholder="Enter second side" id="t2">
+  <input type="text" placeholder="Enter third side" id="t3">
+  <br>
+  <button  onclick="check()">Check</button>
+  <h4 id="ans"></h4>
+  <script>
+    function check(){
+      let side1 = Number(document.getElementById("t1").value);
+      let side2 = Number(document.getElementById("t2").value);
+      let side3 = Number(document.getElementById("t3").value);
+      if(side1==side2 && side1==side3)
+        document.getElementById('ans').innerHTML = "Equilateral";
+      else if(side1==side2 || side1==side3 || side2==side3)
+        document.getElementById('ans').innerHTML = "isosceles";
+      else
+        document.getElementById("ans").innerHTML = "scalene";
+    }
+  </script>
+</body>
+</html>

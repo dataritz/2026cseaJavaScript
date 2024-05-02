@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>WAP to find largest number amoung three number</p>
+  <input type="text" placeholder="Enter frist number" id="t1">
+  <input type="text" placeholder="Enter second number" id="t2">
+  <input type="text" placeholder="Enter third number" id="t3">
+  <br>
+  <button  onclick="check()">Check</button>
+  <h4 id="ans"></h4>
+  <script>
+    function check(){
+      let num1 = Number(document.getElementById("t1").value);
+      let num2 = Number(document.getElementById("t2").value);
+      let num3 = Number(document.getElementById("t3").value);
+      if(num1>num2 && num1>num3)
+        document.getElementById("ans").innerHTML = num1;
+      else if(num2>num3)
+        document.getElementById("ans").innerHTML = num2;
+      else
+      document.getElementById("ans").innerHTML = num3;
+    }
+  </script>
+</body>
+</html>
