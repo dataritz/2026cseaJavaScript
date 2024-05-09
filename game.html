@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container bg-primary mt-2">
+      <div class="row text-center text-white">
+        <div class="col">
+          <h1>Welcome to My Game Show</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card border border-danger border-5">
+            <img src="image/otp.png" height="300px" class="card-img-top" alt="...">
+            <div class="card-body bg-warning">
+              <h5 class="card-title">OTP Generator</h5>
+              <p class="card-text bg-danger fs-2 text-white text-center w-50 mx-auto" id="id1">--</p>
+              <a href="#" class="btn btn-primary" onclick="otp()">Click for OTP</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border border-danger border-5">
+            <img src="image/dice.jpg" height="300px" class="card-img-top" alt="...">
+            <div class="card-body bg-warning">
+              <h5 class="card-title">Dice</h5>
+              <p class="card-text bg-danger fs-2 text-white text-center w-50 mx-auto" id="id2">--</p>
+              <a href="#" class="btn btn-primary" onclick="dice()">Roll the dice</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border border-danger border-5">
+            <img src="image/rps.jpeg" height="300px" class="card-img-top" alt="...">
+            <div class="card-body bg-warning">
+              <h5 class="card-title">rock paper scissors</h5>
+              <p class="card-text bg-danger fs-2 text-white text-center w-75 mx-auto" id="id3">--</p>
+              <a href="#" class="btn btn-primary" onclick="rps(1)">rock</a>
+              <a href="#" class="btn btn-primary" onclick="rps(2)">paper</a>
+              <a href="#" class="btn btn-primary" onclick="rps(3)">cissors</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    function otp(){
+      let ans = Math.floor(Math.random()*(99999-10000))+10000;
+      document.getElementById('id1').innerHTML = ans;
+    }
+    function dice(){
+      let ans = Math.floor(Math.random()*6)+1;
+      document.getElementById('id2').innerHTML = ans;
+    }
+
+    function rps(userinput){
+      let compinput = Math.floor(Math.random()*3)+1;
+      if(userinput==compinput){
+        document.getElementById("id3").innerHTML = "Tie"
+      }
+      else if((userinput==1&& compinput==3) || (userinput==2 && compinput==1) || (userinput==3 && compinput==2)){
+        document.getElementById("id3").innerHTML = "You Win";
+      }
+      else
+      document.getElementById("id3").innerHTML = "Computer Win";
+    }
+  </script>
+</body>
+</html>
