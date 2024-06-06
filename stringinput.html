@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" placeholder="Enter comma sperated n value" id="t1">
+  <button onclick="sum()">Click todisplay sum</button>
+  <script>
+    function sum(){
+      let x = document.getElementById('t1').value;
+      let myarr = x.split(',');
+      let ans = myarr.map((n)=>{return Number(n)})
+      let sum=0;
+      for(val of ans){
+        sum=sum+val;
+      }
+      alert(sum);
+    }
+  </script>
+</body>
+</html>
