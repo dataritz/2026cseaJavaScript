@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="p1">Para1</p>
+  <p>Para2</p>
+  <p>Para3</p>
+  <p>Para4</p>
+  <button onclick="display()">Click</button>
+  <script>
+    function display(){
+      let para = document.getElementsByTagName('p');
+      for(j=2,i=0;i<para.length;i++)
+      para[i].setAttribute('style',`border:${j++}px solid red`)
+    }
+  </script>
+</body>
+</html>

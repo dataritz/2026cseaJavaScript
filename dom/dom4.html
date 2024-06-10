@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    This is my b1 Button <button onclick="removebtn()" name="B1">B1</button><br>
+  </div>
+ <div>
+  This is my b2 Button <button onclick="removebtn()" name="B2">B2</button><br>
+ </div>
+  <div>
+    This is my b3 Button  <button onclick="removebtn()" name="B3">B3</button><br>
+  </div>
+  <div>
+    This is my b4 Button <button onclick="removebtn()" name="B4">B4</button>
+  </div>
+  
+  <script>
+    function removebtn(){
+      let e = event.target;
+      e.parentElement.parentElement.remove();
+    }
+  </script>
+</body>
+</html>

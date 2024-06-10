@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .c1{
+      border: 2px solid red;
+    }
+  </style>
+</head>
+<body>
+  <p class="c1">Para1</p>
+  <h1 class="c1">Haeding</h1>
+  <h5 class="c1">Heading</h5>
+  <p>Para2</p>
+  <button onclick="display()">click</button>
+  <script>
+    function display(){
+      let allElm = document.querySelectorAll('.c1')
+      console.log(allElm[0]);
+    }
+  </script>
+</body>
+</html>
