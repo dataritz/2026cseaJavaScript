@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row text-center bg-primary text-white mt-3">
+      <div class="col">
+        <h1>Welcome to my Recipe Store</h1>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <select name="" id="ingre" class="form-select" onchange="display()">
+         
+        </select>
+      </div>
+    </div>
+    <div class="row mt-3" id="d1">
+
+    </div>
+  </div>
+  <script>
+    function fetchandaddtoSelect(){
+      const url = 'https://www.themealdb.com/api/json/v1/1/list.php?c=list';
+      let promise  = fetch(url);
+      promise.then((response)=>{
+        return response.json();
+      })
+      .then((data)=>{
+        const items = data.meals;
+        let st = ` <option value="">Select any one</option>`;
+        items.map((item)=>{
+          let newitem = `<option value=${item.strCategory}>${item.strCategory}</option>`;
+          st=st+newitem;
+        })
+        document.querySelector('#ingre').innerHTML = st;
+      })
+    }
+    fetchandaddtoSelect();
+
+    function display(){
+      let ingredient  = document.querySelector('#ingre').value;
+      const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${ingredient}`;
+      console.log(url);
+      let promise = fetch(url);
+      promise.then((response)=>{
+       return response.json();
+      })
+      .then((data)=>{
+        let items = data.meals;
+        let st=``;
+        items.map((item)=>{
+          let newcard = `
+          <div class='col-md-4'>
+          <div class="card">
+            <img src=${item.strMealThumb} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">${item.strMeal}</h5>
+            </div>
+          </div>
+          </div>
+          `;
+          st+=newcard;
+        })
+        document.querySelector('#d1').innerHTML = st;
+      })
+    }
+  </script>
+</body>
+</html>
